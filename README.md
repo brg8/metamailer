@@ -45,3 +45,15 @@ to = "test@test.com"
 subject = html = text = "test"
 jangomail.send(from, to, subject, html, text)
 ```
+
+#### Sendgrid
+
+Only supports text emails right now.
+```
+sendgrid = Sendgrid.new("api_user", "api_key")
+# be sure to format your from address correctly
+from = "Benjamin Godlove <benjamin.godlove@test.com>"
+to = "test@test.com"
+subject = html = text = "test"
+sendgrid.send(from, to, subject, html, text)
+```
