@@ -5,7 +5,7 @@ require 'postageapp'
 #  config.api_key = ""# api key goes here
 #end
 
-class PostageAppMailer < MetaMailer
+class MetaMailer::Postageapp < MetaMailer
   def initialize(api_key)
     PostageApp.configure do |config|
       config.api_key = ""
@@ -20,7 +20,8 @@ class PostageAppMailer < MetaMailer
       }, 
       'recipients' => to,
       'content' => {
-        'text/plain'  => text
+        'text/plain'  => text,
+        'text/html'  => html
       }
     })
     response = request.send

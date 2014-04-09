@@ -1,6 +1,6 @@
 require "net/http"
 
-class Jangomail < MetaMailer
+class MetaMailer::Jangomail < MetaMailer
   attr_accessor :username
   attr_accessor :api_key
 
@@ -14,5 +14,6 @@ class Jangomail < MetaMailer
     from_address = from.split("<")[1].split(">")[0]
     from_name = from.split(" <")[0]
     p = {:Username => @username, :Password => @password, :FromEmail => from_address, :FromName => from_name, :ToEmailAddress => to, :Subject => subject, :MessagePlain => text, :MessageHTML => html, :Options => ""}
+    response = Net::HTTP.post_form(uri, p)
   end
 end

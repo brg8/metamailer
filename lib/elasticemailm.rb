@@ -1,4 +1,4 @@
-class ElasticemailMailer < MetaMailer
+class MetaMailer::Elasticemail < MetaMailer
   attr_accessor :username
   attr_accessor :api_key
 

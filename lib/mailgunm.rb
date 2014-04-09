@@ -1,7 +1,7 @@
 require "multimap"
 require "rest-client"
 
-class Mailgun < MetaMailer
+class MetaMailer::Mailgun < MetaMailer
   attr_accessor :username
   attr_accessor :api_key
 

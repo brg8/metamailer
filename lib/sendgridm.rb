@@ -1,6 +1,6 @@
 require "sendgrid_toolkit"
 
-class Sendgrid < MetaMailer
+class MetaMailer::Sendgrid < MetaMailer
   attr_accessor :api_user
   attr_accessor :api_key
 
