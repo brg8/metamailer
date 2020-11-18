@@ -1,3 +1,5 @@
+# This project is no longer maintained
+
 Metamailer is a wrapper for sending email through a couple providers. Right now we have Mailgun, Elasticemail, and Postageapp.
 
 ## Example Usage
